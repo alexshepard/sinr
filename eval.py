@@ -309,7 +309,7 @@ class EvaluatorGeoFeature:
             scaler = MinMaxScaler()
             feats_train_scaled = scaler.fit_transform(feats_train)
             feats_test_scaled = scaler.transform(feats_test)
-            clf = RidgeCV(alphas=(0.1, 1.0, 10.0), normalize=False, cv=10, fit_intercept=True, scoring='r2').fit(feats_train_scaled, labels_train)
+            clf = RidgeCV(alphas=(0.1, 1.0, 10.0), cv=10, fit_intercept=True, scoring='r2').fit(feats_train_scaled, labels_train)
             train_score = clf.score(feats_train_scaled, labels_train)
             test_score = clf.score(feats_test_scaled, labels_test)
             results[f'train_r2_{raster_name}'] = float(train_score)
