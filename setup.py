@@ -17,7 +17,7 @@ def get_default_params_train(overrides={}):
     '''
     misc
     '''
-    params['device'] = 'cuda' # cuda, cpu
+    params['device'] = 'cuda' # cuda, cpu, mps
     params['save_base'] = './experiments/'
     params['experiment_name'] = 'demo'
     params['timestamp'] = False
