@@ -111,6 +111,8 @@ def load_inat_data(ip_file, taxa_of_interest=None):
         obs_ids = data['id'].values
     elif 'observation_uuid' in data.columns:
         obs_ids = data['observation_uuid'].values
+    elif 'observation_id' in data.columns:
+        obs_ids = data['observation_id'].values
 
     return locs, taxa, users, dates, years, obs_ids
 
