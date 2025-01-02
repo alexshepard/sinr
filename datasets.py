@@ -54,7 +54,7 @@ def load_context_feats(data_path):
 def load_inat_data(ip_file, taxa_of_interest=None):
 
     print('\nLoading  ' + ip_file)
-    if ip_file.endswith(".parquet")
+    if ip_file.endswith(".parquet"):
         data = pd.read_parquet(ip_file)
     else:
         data = pd.read_csv(ip_file)
